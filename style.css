@@ -1,0 +1,130 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(239, 235, 235);
+}
+.menu ul{
+    display:flex;
+    list-style: none;
+}
+.menu{
+    display:flex;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+.logo{
+    width:80px;
+    height:80px;
+    overflow: hidden;
+}
+#logo_img{
+    width:50px;
+    height:50px;
+    margin:20px;
+
+}
+#logo_img:hover{
+    transform:scale(1.5);
+}
+.fa-bars{
+    position: absolute;
+    top:40px;
+    right:30px;
+    font-size: 30px;
+    visibility: hidden;
+}
+
+.menu  li {
+    margin:10px;
+    padding: 15px;
+   font-size: 20px;
+   font-family: verdana;
+}
+.menu a{
+    text-decoration: none;
+    color:black;
+}
+.menu li:hover{
+    background-color:rgb(134, 129, 129);
+}
+.menu li:hover a{
+    color:white;
+}
+
+.main{
+    width:80%;
+    margin:auto;
+} 
+.heading{
+    
+    font-size: 80px;
+    font-family:serif;
+    font-weight: bold;
+    background:linear-gradient(to right,red,yellow,orange,brown);
+    color:transparent;
+    background: linear-gradient(to right,aqua,red,orange,yellow);
+    color:transparent;
+    -webkit-background-clip:text;
+    text-align: center;
+}
+p{
+    color:blue;
+    font-size: 30px;
+    text-align: center;
+}
+#foot{
+    background-color: aqua;
+    width:100%;
+    margin:auto;
+}
+p{
+    text-align: center;
+}
+i{
+    text-align: center;
+}
+
+.footer{
+    color:black;
+    font-size: 20px;
+    text-align: center;
+}
+@media screen and (max-width:800px){
+    .navbar{
+        display:flex;
+        flex-direction: column;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+    .menu ul{
+        width:100%;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        visibility: visible;
+    }
+    .menu li{
+        text-align: center;
+    }
+    .heading{
+        margin-top:30px;
+        font-size: 40px;
+    }
+    
+    .foot{
+        color:black;
+        font-size: 20px;
+    }
+    #foot{
+        color:black;
+        text-decoration: none;
+        font-size:20px
+    }
+}

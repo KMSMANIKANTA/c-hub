@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="content.css">
+</head>
+<body>
+    <marquee >Welcome to this page..</marquee>
+    <br><br>
+    <div class="main">
+        <details>
+            <summary>Lab-1</summary>
+            <p>1)Write a c program to print the size of memory taken by different datatypes when used with modifiers?</p>
+ <pre> 
+#include&lt;stdio.h&gt;
+void main(){
+    /*Character*/
+     signed char x='A';
+     printf("The size signed char is %d\n",sizeof(x));
+     unsigned char y='B';
+     printf("The size unsigned char is %d\n",sizeof(y));
+
+    /*integer*/
+     signed short int num1=15;
+     printf("The size of signed short \ is %d\n",sizeof(num1));
+     signed int num2=10;
+     printf("The size of signed int is %d\n",sizeof(num2));
+     signed long int num3=12;
+     printf("The size of signed long int is %d\n",sizeof(num3));
+     signed long long int num4=14;
+     printf("The size of signed long long int  is %d\n",sizeof(num4));
+     unsigned short int num5=15;
+     printf("The size of unsigned short \ is %d\n",sizeof(num5));
+     unsigned int num6=10;
+     printf("The size of unsigned int is %d\n",sizeof(num6));
+     unsigned long int num7=12;
+     printf("The size of unsigned long int is %d\n",sizeof(num7));
+     unsigned long long int num8=14;
+     printf("The size of unsigned long long int  is %d\n",sizeof(num8));
+                         
+     /*float*/
+     float num9=10.0f;
+     printf("The size of float is %d\n",sizeof(num9));
+     num10=100.0;
+     printf("The size of double float is %d\n",sizeof(num10));
+     long double num11=100.0;
+     printf("The size of long double float is %d\n",sizeof(num11));
+     }
+        </pre>
+        <p>2)Write a c program to print a bill by taking input from user?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+        int num_of_items,item_cost,total,discount,tax;
+        printf("Enter number of items:\n");
+        scanf("%d",&num_of_items);
+        printf("Enter cost of a item:\n");
+        scanf("%d",&item_cost);
+        total=num_of_items*item_cost;
+        printf("Enter the discount %\n");
+        scanf("%d",&discount);
+        total=total-((total/100)*discount);
+        printf("Enter the tax :\n");
+        scanf("%d",&tax);
+        total=total+(total/100)*tax;
+        printf("The grandtotal is %d\n",total);
+        }
+</pre>
+<p>3)Write a c program to swap two variables with using third variable?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int a,b,temp;
+            a=5,b=6;
+            printf("Before:a=%d and b=%d\n",a,b);
+            temp=a;
+            a=b;
+            b=temp;
+            printf("After:a=%d and  b=%d\n",a,b);
+        }
+</pre>
+<p>4)Write a c program to swap two variables without using third varible?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int a,b;
+            a=5,b=6;
+            printf("Before:a=%d and b=%d\n",a,b);
+            a=a+b;
+            b=a-b;
+            a=a-b;
+            printf("After:a=%d and  b=%d\n",a,b);
+        }
+</pre>
+        </details>
+        <details>
+            <summary>Lab-2</summary>
+ <p>1)Write a c  program to find the type of character entered?</p>
+            <pre> 
+#include&lt;stdio.h&gt;
+void main(){
+char i;
+  printf("Enter a character:");
+ scanf("%c",&i);
+ if(i&lt;=57 && i&gt;=48)
+printf("%c is a number.",i);
+else if(i&gt;='A' && i&lt;='Z')
+printf("%c is a Capital Alphabets.",i);
+else if(i&gt;='a' && i&lt;='z')
+printf("%c is a small alphabets.",i);
+else
+ }
+                   </pre>
+                   <p>2)Write a c program to print some statements acoording to the temperature entered?</p>
+            <pre> 
+#include&lt;stdio.h&gt;
+ void main(){
+int temp;
+printf("Enter the temperature:");
+scanf("%d",&temp);
+if(temp<0)
+printf("Freezing weather!");
+else if(temp>=0 && temp<10)
+printf("Very cold Weather!");
+else if(temp>=10 && temp<20)
+printf("Cold Weather!");
+else if(temp>=20 && temp<30)
+printf("Normal temperature!");
+else if(temp>=30 && temp<40)
+ printf("It\'s hot");
+        else if(temp>=40)
+        printf("It\'s very hot");
+    }
+             </pre>
+             <p>3)write a c program to build a calculator using switch case?</p>
+             <pre> 
+#include&lt;stdio.h&gt;
+ void main(){
+ int sign_num;
+ printf("Enter the number of required operation +(1) -(2) *(3) <br>/(4) modulus(5)\n");
+ scanf("%d",&sign_num);
+ int a,b;
+ printf("Enter two numbers a and b\n");
+scanf("%d %d",&a,&b);
+switch(sign_num){
+ case 1:{
+printf("The sum of %d and %d is %d\n",a,b,a+b);
+break;
+case 2:{
+printf("The difference of %d and %d is %d\n",a,b,a-b);
+break;
+ }
+ case 3:{
+printf("The product of %d and %d is %d\n",a,b,a*b);
+break;
+  }
+ case 4:{
+ printf("The division of %d an %d is %d\n",a,b,a/b);
+ break;
+}
+case 5:{
+ printf("The remainder of %d and %d is %d\n",a,b,a%b);
+ break;
+}
+ default:{
+ printf("Not a valid input!");
+ }
+ }
+   }
+ </pre>
+              <p>4)Write a c program to take marks form user and to print the grade?</p>
+<pre> 
+#include&lt;stdio.h&gt;
+void main(){
+int sub1,sub2,sub3,sub4,sub5,total;
+int per;
+ printf("Enter the marks of a student in five different <br>subjects out of hundred:");
+scanf("%d %d %d %d %d",&sub1,&sub2,&sub3,&sub4,&sub5);
+total=sub1+sub2+sub3+sub4+sub5;
+per=total*0.2;
+if(sub1>=35 && sub2>=35 &&sub3>=35 && sub4>=35 && sub5>=35){
+printf("He passed in all exams with a total of %d and a <br>percent of %d\n",total,per);
+if(per>=90){
+printf("Grade:A\n");
+else if(per>=80 && per<90){
+    printf("Grade:B\n");
+}
+else if(per>=70 && per<80){
+printf("Grade:C\n");
+  }
+ else if(per>=60 && per<70 ){
+ printf("Grade:D\n");
+ }
+ else if(per>60){
+ printf("Grade:E\n");
+  }
+ else{
+  printf("Student failed in overall percentage\n");
+  }
+}
+ else{
+ printf("The student failed");
+ }
+ }
+</pre>
+<p>5)Write a c program to print the current bill by taking past and present units?</p>
+<pre> 
+ #include&lt;stdio.h&gt;
+   void main(){
+   float past_unit,pre_unit,total;
+   float charge,total_amount;
+   printf("Enter past and present units");
+ scanf("%f %f",&past_unit,&pre_unit);
+ total=pre_unit-past_unit;
+ if(total<=199)
+  charge=1.20;
+else if(total>199 && total<=400)
+ charge=1.5;
+ else if(total>400 && total<=500)
+ charge=3.50;
+  else if(total>500 && total<=700)
+  charge=4.50;
+else if(total>700)
+   charge=9.5;
+ total_amount=total*charge;
+printf("Your bill is %f",total_amount);
+        }
+ </pre></details>
+ <details>
+    <summary>Lab-3</summary>
+    <p>1)Write a c program to print the prime numbers between two numbers?</p>
+    <pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+        int ll,ul,x=1,a=1,fact;
+        printf("Enter lower boundary:");
+        scanf("%d",&ll);
+        printf("Enter upper boundary:");
+        scanf("%d",&ul);
+        printf("The prime between %d and %d are:",ll,ul);
+        for(x=ll;x<=ul;x++)
+        {
+        fact=0;
+        for(a=1;a<=x;a++){
+            if(x%a==0){
+                fact++;
+            }
+        }
+            if(fact==2)
+                printf("%d ",x);
+        }
+        }
+        
+</pre>
+<p>2)Write a c program to find even and odd digts in the entered number?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+    void main(){
+        int n,even_arr[5],odd_arr[5],r,e=0,o=0,i;
+        printf("Enter a number:");
+        scanf("%d",&n);
+        while(n!=0){
+            r=n%10;
+            if(r%2==0)
+            even_arr[e++]=r;
+            else
+            odd_arr[o++]=r;
+            n=n/10;
+        }
+        printf("The odd digits are:");
+        for(i=0;i&lt;o;i++)
+        printf("%d ",odd_arr[i]);
+        printf("\nThe even digits are:");
+        for(i=0;i&lt;e;i++)
+        printf("%d ",even_arr[i]);	
+    }
+</pre>
+<p>3)Write a c program to check whether a number is palindrome or not?</p>
+<pre>  #include&lt;stdio.h&gt;
+    void main(){
+        int num,r,c=0,i,sum;
+        printf("Enter a number:");
+        scanf("%d",&num);
+        for(i=num;i!=0;i/=10){
+            c++;
+        }
+        for(i=num;i!=0;i/=10){
+            r=i%10;
+            sum=sum+pow(r,c);
+        }
+        if(num==sum)
+        printf("%d is a amstrong number",num);
+        else
+        printf("%d is not a amstrong number",num);
+    }
+</pre>
+<p>4)Write a c program to check whether a number is amstrong or not?</p>
+<pre>#include&lt;stdio.h&gt;
+    void main(){
+        int num,r,c=0,i,sum;
+        printf("Enter a number:");
+        scanf("%d",&num);
+        for(i=num;i!=0;i/=10){
+            c++;
+        }
+        for(i=num;i!=0;i/=10){
+            r=i%10;
+            sum=sum+pow(r,c);
+        }
+        if(num==sum)
+        printf("%d is a amstrong number",num);
+        else
+        printf("%d is not a amstrong number",num);
+    }</pre>
+<p>5)Write a c program to find the sum of the series 1-(x**2/2!)+(x**4/4!)
+    -(x**6/6!)+..... by taking the value of x and number of terms from user?</p>
+<pre>  
+     #include &lt;stdio.h&gt;
+    void main(){
+        int n,i,d;
+        float x,t=1,sum=1;
+        printf("Enter number of terms:");
+        scanf("%d",&n);
+        printf("Enter value of x:");
+        scanf("%f",&x);
+        for(i=1;i&lt;n;i++){
+            d=(2*i)*(2*i-1);
+            t=-(x*x*t)/d;
+            sum=sum+t;
+        }
+        printf("The sum is %f",sum);
+        
+    }
+</pre>
+<p>6)Write a c program to find the sum of series 9+99+999+... 
+    by taking number of terms from user?</p>
+<pre>    #include&lt;stdio.h&gt;
+    #include<math.h>
+    void main(){
+      int num,i,sum=0,a;
+      printf("Enter the number of terms in a sequence:");
+      scanf("%d",&num);
+      for(i=1;i&lt;=num;i++){
+        a=pow(10,i)-1;
+        sum+=a;
+      }
+      printf("The sum is %d",sum);
+    }   </pre>
+<p>7)Write a c program to find decimal number of a binary number?</p>
+<pre>#include&lt;stdio.h&gt;
+    #include<math.h>
+    void main(){
+        int num,r,sum=0,i=0,temp;
+        printf("Enter a binary number:");
+        scanf("%d",&num);
+        temp=num;
+        while(num!=0){
+            r=num%10;
+            sum+=(pow(2,i)*r);
+            i++;
+            num/=10;
+        }
+        printf("The decimal of %d is %d",temp,sum);
+    } </pre>
+<p>8)Write a c program to find decimal of an octal number?</p>
+<pre>   #include&lt;stdio.h&gt;
+    #include<math.h>
+    void main(){
+        int num,r,sum=0,i=0,temp;
+        printf("Enter an octal number:");
+        scanf("%d",&num);
+        temp=num;
+        while(num!=0){
+            r=num%10;
+            sum+=(pow(8,i)*r);
+            i++;
+            num/=10;
+        }
+        printf("The decimal of %d is %d",temp,sum);
+    }   </pre>
+    <p>9)Write a c program to find hexadecimal of a decimal number?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,r,c=0,i;
+            char hex_dec[100];
+            printf("Enter  a number:");
+            scanf("%d",&n);
+            while(n!=0){
+                r=n%16;
+                if(r<10)
+                hex_dec[c++]=r+48;
+                else
+                hex_dec[c++]=r+55;
+                n=n/16;
+            }
+            for(i=c;i&gt;=0;i--)
+            printf("%c",hex_dec[i]);
+        }    
+</pre>
+<p>10)Write a c program to fidn the unique digits in a number?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,r,i;
+            printf("Enter a number:");
+            scanf("%d",&n);
+            int a[10]={0};
+            while(n!=0){
+            r=n%10;
+            a[r]++;
+            n=n/10;	
+            }
+            printf("the unique digits are :");
+            for(i=0;i&lt;10;i++){
+                if(a[i]==1){
+                    printf("%d ",i);
+                }
+            }
+      }
+    </pre>
+ </details>
+
+ <details>
+    <summary>Lab-4</summary>
+    <p>1)Write a c program to take an input array of n numbers and find out the sum ,product and mean of all elements?</p>
+    <pre>
+        #include&lt;stdio.h&gt;
+            void main(){
+                int n,i,product=1;
+                float mean,sum=0;
+                printf("Enter the length of array:");
+                scanf("%d",&n);
+                int a[n];
+                for(i=0;i&lt;n;i++){
+                    scanf("%d",&a[i]);
+                    
+                }
+                for(i=0;i&lt;n;i++){
+                    sum+=a[i];
+                    product*=a[i];
+                }
+                mean=sum/n;
+                printf("\nsum is %d and product is %d and mean <br>is %f",sum,product,mean);
+            }
+    </pre>
+    <p>2)Write a c program to count the total number of duplicate elements in an array?</p>
+    <pre>
+        #include&lt;stdio.h&gt;
+        void main(){
+            int n,c=0,i,j;
+            printf("Enter length of array:");
+            scanf("%d",&n);
+            int a[n];
+            printf("enter elements:");
+            for(i=0;i&lt;n;i++){
+                scanf("%d",&a[i]);
+            }
+            for(i=0;i&lt;n;i++){
+                for(j=i+1;j&lt;n;j++){
+                    if(a[i]==a[j]){
+                        c++;
+                        break;
+                    }
+                }
+            }
+            if(c>=1)
+            printf("The no of  duplicate elements is %d",c);
+            else
+            printf("No duplicate elements!");
+        }   
+    </pre>
+<p>3)Write a c program to print all the distinct pairs with a diffrence of 5 in an array?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,i,j;
+            printf("Enter length of array:");
+            scanf("%d",&n);
+            int a[n];
+            printf("enter elements:");
+            for(i=0;i&lt;n;i++){
+                scanf("%d",&a[i]);
+            }
+            for(i=0;i&lt;n;i++){
+                for(j=0;jn&lt;;j++){
+                    if(a[i]-a[j]==5){
+                        printf("[%d,%d]",a[i],a[j]);
+                    }
+                }
+            }
+            
+            }   
+</pre>
+<p>4)Write a program to count the frequency of all elements in an array?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,i,c=1,j,a[100],b[100];
+            printf("Enter length of array:");
+            scanf("%d",&n);
+            printf("Enter elements:");
+            for(i=0;i&lt;n;i++){
+            scanf("%d",&a[i]);
+            b[i]=0;
+        }
+            for(i=0;i&lt;n;i++){
+                c=1;
+                if(a[i]!=-1){
+                    for(j=i+1;j&lt;n;j++){
+                        if(a[i]==a[j]){
+                            c++;
+                            a[j]=-1;
+                        }
+                    }
+                    b[i]=c;
+                }
+                }
+                for(i=0;i&lt;n;i++){
+                    if(a[i]!=-1)
+                    printf("no of %d is %d\n",a[i],b[i]);
+                }
+            }
+        
+</pre>
+<p>5)Find the second largest element in an array?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main()
+        {
+            int l,i,j,temp;
+            printf("Enter the length of array:");
+            scanf("%d",&l);
+            int a[l];
+            for(i=0;i&lt;l;i++)
+            scanf("%d",&a[i]);
+            for(i=0;i&lt;l-1;i++){
+                for(j=0;j&lt;l-i-1;j++){
+                    if(a[j]>a[j+1]){
+                    temp=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=temp;
+                }
+                }
+            }
+        printf("%d is second largest",a[l-2]);
+        }
+        
+</pre>
+<p>6)write a c program to merge one array and another and to print final array as a sorted array?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int l1,l2,i,j,temp;
+            printf("Enter lengths of two arrays:");
+            scanf("%d %d",&l1,&l2);
+            int a[l1],b[l2],c[l1+l2];
+            printf("Enter elements of array 1:");
+            for(i=0;i&lt;l1;i++)
+            scanf("%d",&a[i]);
+            printf("Enter elements of array 2:");
+            for(i=0;i&lt;l2;i++)
+            scanf("%d",&b[i]);
+            for(i=0;i&lt;l1;i++){
+                c[i]=a[i];
+            }
+            for(j=0;j&lt;l2;j++){
+                c[i+j]=b[j];
+            }
+        for(i=0;i&lt;l1+l2-1;i++){
+            for(j=0;j&lt;l1+l2-1-i;j++){
+                if(c[j]>c[j+1]){
+                    temp=c[j];
+                    c[j]=c[j+1];
+                    c[j+1]=temp;
+                }
+            }
+        }
+        printf("\nThe sorted elements are:");
+        for(i=0;i&lt;l1+l2;i++){
+            printf("%d ",c[i]);
+        }
+        }   
+</pre>
+<p>7)write a c program to check whether an array is subset of another array></p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int l1,i,j,flag=0,l2;
+            printf("Enter length of array 1:");
+            scanf("%d",&l1);
+            int a[l1];
+            for(i=0;i&lt;l1;i++)
+            scanf("%d",&a[i]);
+            printf("Enter length of  subset array:");
+            scanf("%d",&l2);
+            int b[l2];
+            for(i=0;i&lt;l2;i++)
+            scanf("%d",&b[i]);
+            for(i=0;i&lt;l1;i++){
+                for(j=0;j&lt;l2;j++){
+                    if(a[i]==b[j])
+                    flag++;
+                }
+            }
+            if(flag==l2)
+            printf("Subset");
+            else
+            printf("Not a Subset");
+        }
+</pre>
+<p>8)Write a c program to implement bubble sort?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,temp;
+            printf("Enter number of elements:");
+            scanf("%d",&n);
+            int a[n],i,j;
+            printf("Enter array elements:");
+            for(i=0;i&lt;n;i++)
+            scanf("%d",&a[i]);
+            for(i=0;i&lt;n;i++){
+                for(j=0;j&lt;n-i-1;j++){
+                    if(a[j]>a[j+1])
+        {
+            temp=a[j+1];
+            a[j+1]=a[j];
+            a[j]=temp;
+                }		}
+            }
+            for(i=0;i&lt;n;i++)
+            printf("%d ",a[i]);
+        }
+        
+</pre>
+<p>9)Write a  c program to implement selection sort?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int n,temp,min;
+            printf("Enter number of elements:");
+            scanf("%d",&n);
+            int a[n],i,j;
+            printf("Enter array elements:");
+            for(i=0;i&lt;n;i++)
+            scanf("%d",&a[i]);
+            for(i=0;i&lt;n;i++){
+                min=i;
+                for(j=i+1;j&lt;n;j++){
+                    if(a[min]>a[j])
+                    min=j;
+                }
+                if(min!=i){
+                    temp=a[min];
+                    a[min]=a[i];
+                    a[i]=temp;
+                }
+            }
+            for(i=0;i&lt;n;i++)
+            printf("%d ",a[i]);
+        }
+        
+</pre>
+<p>10)write a c program to find the transpose of a given matrix?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            int a[10][10],t[10][10];
+            int r,c,i,j;
+            printf("Enter r and c:");
+            scanf("%d %d",&r,&c);
+            for(i=0;i&lt;r;i++){
+                for(j=0;j&lt;c;j++)
+                scanf("%d",&a[i][j]);
+            }
+            for(i=0;i&lt;r;i++){
+                for(j=0;j&lt;c;j++){
+                    t[j][i]=a[i][j];
+                }
+            }
+            for(i=0;i&lt;c;i++){
+                for(j=0;j&lt;r;j++){
+                    printf("%d ",t[i][j]);
+                }
+                printf("\n");
+            }
+            
+            
+        }
+</pre>
+<p>11)write a c program to find the sum of right daigonal elements of a matrix?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        int main(){
+            int n;
+            printf("Enter length of square matrix:");
+            scanf("%d",&n);
+            int a[n][n];
+            int i,j,sum;
+            printf("Enter elements:");
+            for(i=0;i&lt;n;i++){
+                for(j=0;j&lt;n;j++)
+                    scanf("%d",&a[i][j]);
+            }
+            for(i=0;i&lt;n;i++){
+                for(j=0;j&lt;n;j++){
+                    if(i==j)
+                    sum+=a[i][j];
+                }
+            }
+            printf("The sum of right diagonal elements is %d",sum);
+            return 0;
+        }
+</pre>
+<p>12)Write a c program to find sum of a row elements and to add it as a last column?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        int main(){
+            int n;
+            printf("Enter length of square matrix:");
+            scanf("%d",&n);
+            int a[n][n];
+            int i,j,sum;
+            printf("Enter elements:");
+            for(i=0;i&lt;n;i++){
+                for(j=0;j&lt;n;j++)
+                    scanf("%d",&a[i][j]);
+            }
+            for(i=0;i&lt;n;i++){
+                sum=0;
+                for(j=0;j&lt;n;j++){
+                    sum+=a[i][j];
+                }
+                a[i][j]=sum;
+            }
+            for(i=0;i&lt;n;i++){
+                for(j=0;j&lt;n+1;j++){
+                    printf("%d ",a[i][j]);
+                }
+                printf("\n");
+            }
+            
+        }  
+</pre>
+<p>13)write a c program to display the lower triangular matrix of a given matrix?</p>
+<pre>
+    //upper triangular matrix 
+    #include&lt;stdio.h&gt;
+    int main(){
+        int n;
+        printf("Enter length of square matrix:");
+        scanf("%d",&n);
+        int a[n][n];
+    
+        int i,j,sum,flag;
+        printf("Enter elements:");
+        for(i=0;i&lt;n;i++){
+            for(j=0;j&lt;n;j++)
+                scanf("%d",&a[i][j]);
+        }
+         for(i=0;i&lt;n;i++){
+             for(j=0;j&lt;n;j++){
+                 if(i&gt;j)
+                 a[i][j]=0;
+             }
+         }
+         for(i=0;i&lt;n;i++){
+             for(j=0;j&lt;n;j++){
+                 printf("%d",a[i][j]);
+             }
+             printf("\n");
+         }
+    }
+</pre>
+<p>14)Write a c program to check whether a given matrix is an identity matrix?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+        int n,i,j,flag=1;
+        printf("Enter length of square matrix:");
+        scanf("%d",&n);
+        int a[n][n];
+        for(i=0;i&lt;n;i++){
+            for(j=0;j&lt;n;j++){
+                scanf("%d",&a[i][j]);
+            }
+        }
+        for(i=0;i&lt;n;i++){
+            for(j=0;j&lt;n;j++){
+                if(i!=j){
+                    if(a[i][j]!=0)
+                        flag=0;
+                }
+                else
+                    if(a[i][i]!=1)
+                    flag=0;
+            }
+        }
+        if(flag==1)
+            printf("Identity matrix");
+        else
+            printf("Not an identity matrix");
+        }
+        
+</pre>
+ </details>
+ <details>
+    <summary>Lab-5</summary>
+<p>1)Write a program in c to count total number of vowel of consonant in a string?</p>
+<pre>
+#include&lt;stdio.h&gt;
+  void main(){
+char str[100];
+int i,v_c=0,c_c=0;
+ printf("Enter a string:");
+ gets(str);
+for(i=0;str[i]!='\0';i++){
+if((str[i]>=65 && str[i]<=90)||(str[i]<=122 && str[i]>=97)){
+  if(str[i]=='a'||str[i]=='e'||str[i]=='i' <br>||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E' <br>||str[i]=='I'||str[i]=='O'||str[i]=='U')
+v_c++;
+  else
+ c_c++;
+   }          
+ }
+printf("The vowels are %d and consonants are %d",v_c,c_c);
+}   
+</pre>
+<p>2)Write a c program to find maximum occuring character in a string?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+void main(){
+ char str[100];
+    int i,freq[26]={0},max=0,ind;
+ printf("Enter a string in lower case:");
+ gets(str);
+for(i=0;str[i]!='\0';i++){
+ freq[str[i]-97]++;
+ }
+for(i=0;i&lt;26;i++){
+ if(freq[i]>=max){
+   max=freq[i];
+    ind=i;
+  }
+   }
+   printf("Max is %c",ind+97);
+    }
+        
+</pre>
+<p>3)Write a c program to sort a string array in ascending order?</p>
+<pre>
+    //verified
+    #include&lt;stdio.h&gt;
+    void main(){
+        char str[100],temp;
+        int i,j,l=0;
+        printf("Ente a string:");
+        gets(str);
+        for(i=0;str[i]!='\0';i++)
+            l++;
+        for(i=0;i&lt;l;i++){
+            for(j=0;j&lt;l-i-1;j++){
+                if(str[j]>str[j+1]){
+                    temp=str[j];
+                    str[j]=str[j+1];
+                    str[j+1]=temp;
+                }
+            }
+        }
+        for(i=0;i&lt;l;i++){
+            printf("%c",str[i]);
+        }
+        
+    }   
+</pre>
+<p>4)Write a c program to check whether a given substring is present in the given string?
+</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        #include<string.h>
+        void main(){
+            char str1[100],str2[100];
+            printf("Enter a string:");
+            gets(str1);
+            printf("Enter a substring:");
+            gets(str2);
+            int i,j,l1=strlen(str1),l2=strlen(str2);
+            j=0;
+            for(i=0;i&lt;l1;i++){
+                if(str1[i]==str2[j]){
+                    j++;
+                }
+            }
+            if(j==l2)
+            printf("Substring");
+            else
+            printf("Not a substring");
+        }
+</pre>
+<p>5)Write a c program to read a sentence and replace lowercae with uppwercase and vice versa?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            char str[100];
+            printf("Enter a string:");
+            gets(str);
+            int i;
+            for(i=0;str[i]!='\0';i++){
+                if(str[i]>=65 && str[i]<=90)
+                str[i]=str[i]+32;
+                else if(str[i]<=122 && str[i]>=97)
+                str[i]=str[i]-32;
+            }
+            printf("The string is %s",str);
+        }
+</pre>
+<p>6)Write a program in c to find the number of times a given word "the" appears int he given string?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            char str[100];
+            printf("Enter a string:");
+            gets(str);
+            int i,c=0;
+            for(i=0;str[i]!='\0';i++){
+                if((str[i]=='T'||str[i]=='t') && (str[i+1]=='H'<br>||str[i+1]=='h')&&(str[i+2]=='E'|| str[i+2]=='e'))
+                c++;
+            }
+            printf("The count of the is %d",c);
+        }
+</pre>
+<p>7)Write a c program to read a file and remove the spaces between two words of its content?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            char str[1000],x;
+            int i=0;
+            while((x=getchar())!='*'){
+                str[i++]=x;
+            }
+            for(i=0;str[i]!='\0';i++){
+                if(str[i]!=32)
+                putchar(str[i]);
+            }
+        }
+</pre>
+<p>8)Write a c program to check whether a character is digit or not?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            printf("Enter a character");
+            char x=getchar();
+            if(x>=48 && x<=57)
+            printf("%c is digit",x);
+            else if((x<=90 && x>=65)||(x<=122 && x>=97))
+            printf("%c is a alphabet",x);
+        }
+</pre>
+<p>9)Write a c program to count hte total number of words in a string?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void main(){
+            char str[100];
+            int c=0,i;
+            printf("Enter a string:");
+            gets(str);
+            for(i=0;str[i]!='\0';i++){
+                if(str[i]==32 && str[i+1]!=32)
+                c++;	
+            }	
+            printf("The number of words are %d",c+1);
+            }
+</pre>
+ </details>
+ <details>
+    <summary>Lab-6</summary>
+    <p>1)Write a c program to find the sum of the series 1!/1+2!/2+3!/3+4!/4+5!/5?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        void sum(int n){
+            int i,s=0;
+            for(i=1;i&lt;=n;i++){
+                s+=(fact(i)/i);
+            }
+            printf("The sum is %d",s);
+        }
+        int fact(int n){
+            int i,fac=1;
+            for(i=1;i&lt;=n;i++)
+            fac=fac*i;
+            return fac;
+        }
+        void main(){
+            int n;
+            printf("Enter number of terms:");
+            scanf("%d",&n);
+            sum(5);
+        }
+</pre>
+<p>2)Write a function that accepts a number n as input and return the average of numbers from 1 to n?</p>
+<pre>#include&lt;stdio.h&gt;
+    float average(int n){
+        int i;
+        float avg,sum=0;
+        for(i=1;i&lt;=n;i++){
+            sum=sum+i;
+        }
+        avg=sum/n;
+        return avg;
+    }
+    void main(){
+        int n;
+        printf("Enter upper boundary:");
+        scanf("%d",&n);
+        float avg=average(n);
+        printf("The average upto %d is %f",n,avg);
+    }</pre>
+<p>3)Write a function is_prime that returns 1 if the arguments passed to it is a prime number and a  otherwise?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+    int is_prime(int n){
+        int i,fact=0;
+        for(i=1;i&lt;=n;i++){
+            if(n%i==0)
+            fact++;
+        }
+        if(fact==2)
+        return 1;
+        else
+        return 0;
+        
+    }
+    void main(){
+        int n,val;
+        printf("Enter a number:");
+        scanf("%d",&n);
+        val=is_prime(n);
+        if(val==1)
+        printf("prime number.");
+        else
+        printf("Not a prime number.");
+        
+    }
+</pre>
+<p>4)Write a c program to find out maximum and minimum of some values using function?</p>
+<pre>
+        #include&lt;stdio.h&gt;
+    void max_min(int b[],int l){
+        int i,max=0,min=32765;
+        for(i=0;i&lt;l;i++){
+            if(b[i]>max)
+                max=b[i];
+            if (b[i]&lt;min)
+                min=b[i];
+        }
+        printf("%d is max and %d is min",max,min);
+    }
+    void main(){
+        int n,i;
+        printf("Enter number of values:");
+        scanf("%d",&n);
+        int a[n];
+        printf("Enter values to array:");
+        for(i=0;i&lt;n;i++)
+            scanf("%d",&a[i]);
+        max_min(a,n);
+        
+        
+    }
+</pre>
+<p>5)Write a function is_leap_year which takes the yea as its arguments and checks whether the year is a leap year or not and then displays an appropriate message ont he screen?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        int is_leap_year(int n){
+            if(n%400==0 || (n%4==0 && n%100!=0)){
+              return 1;
+            }
+            else{
+            return 0;
+            }
+        }
+        void main(){
+            int n,ans;
+            printf("Enter a year:");
+            scanf("%d",&n);
+            ans=is_leap_year(n);
+            if(ans==1)
+            printf("leap year");
+            else if(ans==0)
+            printf("not a leap year");
+        }
+</pre>
+<p>6)Write a c program to calculate the sum of numbers from 1 to n using recursion?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+    int sum(n){
+        if(n==0)
+        return 0;
+        else
+        return n+sum(n-1);
+    }
+    void main(){
+        int n,s;
+        printf("Enter a number:");
+        scanf("%d",&n);
+        s=sum(n);
+        printf("The sum upto %d is %d",n,s);
+    }
+</pre>
+<p>7)Write a c program to convert a decimal numbe to binary using recursion?</p>
+<pre>
+    #include &lt;stdio.h&gt;
+    unsigned long long int findbin(int n) {
+        if (n== 0) 
+            return 0;
+        else 
+            return n % 2 + 10 *(findbin(n/2));
+        
+    }
+    void main() {
+        int n;
+        printf("Enter a decimal number: ");
+        scanf("%d", &n);
+        printf("The binary equivalent of %d is %llu.\n",n,findbin(n));
+    }
+    
+</pre>
+<p>8)Write a program in c find the LCM of two numbers using recursion?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+    int is_prime(int n){
+        int i,fact=0;
+        for(i=1;i&lt;=n;i++){
+            if(n%i==0)
+            fact++;
+        }
+        if(fact==2)
+        return 1;
+        else
+        return 0;
+        
+    }
+    void main(){
+        int n,val;
+        printf("Enter a number:");
+        scanf("%d",&n);
+        val=is_prime(n);
+        if(val==1)
+        printf("prime number.");
+        else
+        printf("Not a prime number.");
+        
+    }
+</pre>
+<p>9)Write a c program for binary search using recursion?</p>
+<pre>
+    #include&lt;stdio.h&gt;
+        int binsearch(int arr[],int x,int l,int r){
+            int mid;
+            if(r>=l){
+            mid=l+(r-l)/2;
+            if(arr[mid]==x)
+            return mid;
+            if(arr[mid]>x){
+            return binsearch(arr,x,l,mid-1);
+        }
+            return binsearch(arr,x,mid+1,r);
+          }
+          return -1;
+        
+        }
+        void main(){
+            int n;
+            printf("Enter the number of terms:");
+            scanf("%d",&n);
+            int arr[n],i,x,ind;
+            printf("Enter elements in ascending order:");
+            for(i=0;i&lt;n;i++){
+                scanf("%d",&arr[i]);
+            }
+            printf("Enter key to search:");
+            scanf("%d",&x);
+            ind=binsearch(arr,x,0,n-1);
+            if(ind==-1)
+            printf("Not present in array");
+            else
+            printf("Present  in index %d",ind);
+            
+        }
+</pre>
+<p>10)Write a c program to Tower Of Hano using recursion?</p>
+<pre>
+#include &lt;stdio.h&gt;
+void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod) {
+if (n == 1) {
+    printf("Move disk 1 from rod %c to rod %c.\n", from_rod, to_rod);
+    return;
+     }
+towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+ printf("Move disk %d from rod %c to rod %c.\n", n, from_rod, to_rod);
+towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+    }
+    void main() {
+     int n = 4;
+    printf("The sequence of moves involved in the Tower of Hanoi are:\n");
+    towerOfHanoi(n, 'A', 'C', 'B');
+     }
+        
+</pre>
+ </details>
+</div>
+</body>
+</html>
